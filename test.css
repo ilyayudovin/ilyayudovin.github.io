@@ -1,0 +1,58 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Raleway', sans-serif;
+}
+body{
+    /* background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ),url("https://www.gsma.com/iot/wp-content/uploads/2015/03/man-with-phone.jpg");
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-attachment: fixed;*/
+    background-color: #fafafa;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-size: cover;
+}
+.toggle>input[type="radio"] {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex;
+    align-items: center;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.overlay img{
+    max-width: 90%;
+    max-height: 90%;
+    width: auto;
+    height: auto;
+    transform: scale(0.95);
+    transition: transform .3s;
+}
+
+.overlay:target {
+    visibility: visible;
+    outline: none;
+    cursor: default;
+}
+
+.overlay:target img {
+    transform: scale(1);
+}

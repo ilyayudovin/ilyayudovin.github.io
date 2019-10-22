@@ -1,0 +1,261 @@
+@media only screen and (max-width: 1200px){
+    .bigcolumn{
+        width: 650px;
+    }
+
+}
+
+@media only screen and (max-width: 992px){
+    .avatar{
+        display: none;
+    }
+    .intro h1{
+        font-size: 55px;
+    }
+    .intro p{
+        font-size: 24px;
+    }
+    .intro{
+        width: 750px;
+    }
+}
+@media only screen and (max-width: 768px){
+    .intro h1{
+        font-size: 45px;
+    }
+    .intro p{
+        font-size: 22px;
+    }
+    .intro{
+        width: 84%;
+        margin-left: 20px;
+    }
+
+}
+@media only screen and (max-width: 510px){
+    .nav-item2{
+        display: none;
+    }
+    header nav ul li:first-child{
+        display: inline-block;
+    }
+    header nav ul li:not(.mob){
+        display: none;
+    }
+    .postlab{
+        width: 100%;
+        border: none;
+    }
+    form.test{
+        border: none;
+        height: 275px;
+        border-radius: 0;
+    }
+    form.test:hover{
+        box-shadow: none;
+    }
+    .processline,.process{
+        border-radius: 0;
+    }
+    .btn-info{
+        background-color: #fafafa!important;
+        color: black;
+    }
+    .btn-info:hover{
+        color: black;
+    }
+
+    .fa-arrow-right{
+        color: whitesmoke;
+    }
+    .fa-arrow-right:hover{
+        color: white;
+    }
+
+    .postlab h1{
+        display: none;
+    }
+    .wall{
+        display: block;
+        margin-top: 5px;
+        width: 100%;
+        height: 100%;
+        overflow: scroll;
+        border-radius: 0;
+
+    }
+
+    .pic1:hover .mask{
+        display: none;
+    }
+    .pic2:hover .mask{
+        display: none;
+    }
+    .vote2,.vote1{
+        width: 80px;
+        margin:10px 60px;
+    }
+    .bigcolumn,.postgroup,.post{
+        width: 100%;
+    }
+   .description_area{
+       padding: 0 10px;
+       height:50px;
+       margin-bottom: 5px;
+   }
+   .avatar{
+       margin-left: 20px;
+   }
+   .statistics3,.stats{
+       display: none;
+   }
+   .pic1,.pic2{
+       border-radius: 2px;
+       transition-duration: 1s;
+       animation-duration: 1s;
+   }
+}
+
+@media only screen and (max-width: 415px){
+    .homelink{
+        display: block;
+    }
+    .totop{
+        display: none;
+    }
+    .mask{
+        display: none;
+    }
+    .pic1,.pic2{
+        width:193px;
+        height: 270px;
+    }
+    .phonelikes1, .phonelikes2{
+        display: block;
+    }
+    .chart-area{
+        height: 345px;
+    }
+    #navbar{
+        height: 60px;
+    }
+    .col-md-12{
+        padding: 0;
+    }
+    ul.stepper li a{
+        padding-left: 5px;
+    }
+    .stepper-horizontal li:not(:last-child):after{
+        left:18px;
+    }
+    .understepper{
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        padding-top: 30px;
+    }
+    .bigcolumn{
+        padding-top: 75px;
+    }
+    .postlabtop{
+        border: 1px solid lightgray;
+    }
+    .postlabbottom{
+        height: 100%;
+        position: relative;
+
+    }
+    .postlab{
+        position: fixed;
+        display: none;
+        top: 0px;
+        height: 100%;
+    }
+    .removepic_phone{
+        display: block;
+    }
+    .fa-times-circle{
+        display: block;
+    }
+    .description{
+        width: 100%;
+        padding: 0 20px;
+    }
+    .md-form label{
+        left: 20px;
+    }
+    .postingspan{
+        padding-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 376px){
+    .pic1,.pic2{
+        width:173px;
+        /*height: 220px;*/
+    }
+    .navbar-brand{
+        margin-right: -4rem;
+    }
+    .phonehome{
+        display: list-item;
+        color: black;
+        cursor: pointer;
+        font-size: 19px;
+    }
+    /*.far{*/
+        /*font-size: 20px;*/
+    /*}*/
+    .intro{
+        transform: translate(-50%, -50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin: 0;
+        padding: 0;
+    }
+    .intro h1{
+        font-size: 25px;
+    }
+    .intro p{
+        font-size: 15px;
+    }
+    a .button{
+        width: 100px;
+        font-size: 17px;
+        line-height: 30px;
+    }
+    .description{
+        width: 100%;
+        padding: 0 20px;
+    }
+    footer{
+        padding-top: 0;
+        padding-bottom: 5px;
+    }
+    footer .wrapper{
+        font-size: 12px;
+        padding-right: 20px;
+    }
+    .wrapper ul li{
+        margin: 0 10px;
+    }
+    .back form ,.btn-primary{
+        width: 80%;
+    }
+    .btn-primary{
+        width: 80%;
+    }
+
+    .fa-times{
+        color: black;
+    }
+
+}
+@media only screen and (max-width: 321px) {
+    .pic1,.pic2{
+        width:147px;
+        /*height: 200px;*/
+    }
+}
+

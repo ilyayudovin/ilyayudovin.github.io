@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-family:'Raleway', sans-serif;
+}
+html a{
+    text-decoration: none;
+}
+body{
+    height: 100%;
+}
+.background1{
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6) ),url("https://www.gsma.com/iot/wp-content/uploads/2015/03/man-with-phone.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    position: absolute;
+    background-size: cover;
+}
+.back{
+    width: 100%;
+    position: absolute;
+    height: 100%;
+
+}
+a.phonehome:hover{
+    color: #8ad5d8!important;
+}
+.phonehome{
+    color: whitesmoke;
+    margin-top: 15px;
+    font-size: 25px;
+    right: 10px;
+    position: absolute;
+}
+form{
+    width: 333px;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    z-index: 9999;
+    top: 50%;
+    left: 50%;
+
+}
+.headword{
+    padding-top: 15px;
+    font-size: 25px;
+    color: #8ad5d8;
+}
+.md-form label, .already, label{
+    color: white;
+}
+i{
+    color: white;
+}
+.md-form label:active{
+    color:#8ad5d8;
+}
+.md-form input[type=text]:focus:not([readonly])+label, .md-form input[type=email]:focus:not([readonly])+label
+,.md-form input[type=number]:focus:not([readonly])+label, .md-form input[type=password]:focus:not([readonly])+label{
+    color:#8ad5d8;
+}
+.md-form input[type=text]:focus:not([readonly]),.md-form input[type=email]:focus:not([readonly]),
+.md-form input[type=number]:focus:not([readonly]),.md-form input[type=password]:focus:not([readonly]){
+    border-bottom-color:#8ad5d8;
+    -webkit-box-shadow: 0 1px 0 0 #8ad5d8;
+}
+.md-form .prefix .active{
+color: #8ad5d8!important;
+}
+.btn-primary{
+    background-color: #8ad5d8!important;
+    width: 80%;
+}
+input#inputMDEx.form-control,input#inputValidationEx.form-control.validate,
+input#numberExample.form-control,input#inputValidationEx2.form-control.validate{
+    color: whitesmoke;
+}
+
+

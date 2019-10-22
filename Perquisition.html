@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link href="dropzone.css" rel="stylesheet" type="text/css">
+    <link href="perquisition.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="media.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- MDBootstrap Steppers Pro  -->
+    <link href="css/addons-pro/stepper.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="tan" id="tan" onclick="hidetan();"></div>
+<div class="skin" id="skin">
+    <header id="header">
+        <nav class="navbar navbar-expand-lg navbar-dark primary-color" id="navbar">
+
+            <!-- Navbar brand -->
+            <div class="navbar_choice"><a  href="index.html"><i class="fas fa-home" style="color: black;font-size: 25px"></i></a></div>
+            <div class="navbar_choice"><a onclick="topFunction()"><img src="newlogo.png" style="height: 34px"></a></div>
+            <div class="navbar_choice"><a onclick="tanscreen(this.id);"><i class="far fa-plus-square" style="font-size: 25px"></i></a></div>
+
+            <!--<a href="index.html" class="navbar-brand homelink" style="padding-bottom: 8px"><i class="fas fa-home" style="color: black;font-size: 25px"></i></a>-->
+            <!--<a class="navbar-brand" href="#" style="height: 60px" onclick="topFunction()"><img src="logo.png"></a>-->
+            <!--<a class="navbar-brand"><i class="far fa-plus-square"></i></a>-->
+
+            <!--<a href="index.html" class="phonehome navbar-brand" style="color: black">Home</a>-->
+            <!-- Collapse button -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#basicExampleNav"
+                    aria-controls="basicExampleNav" aria-expanded="false" aria-label="Toggle navigation"
+                    onclick="phonepost()">
+                <span class="navbar-toggler-icon" style="display: none"></span>
+            </button>
+
+            <!-- Collapsible content -->
+            <div class="collapse navbar-collapse" id="basicExampleNav" style="background-color: #8ad5d8">
+
+                <!-- Links -->
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home
+                            <span class="sr-only">(current)</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Your polls</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+
+                    <!-- Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                           aria-haspopup="true"
+                           aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu dropdown-primary" aria-labelledby="navbarDropdownMenuLink">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </li>
+
+                </ul>
+                <!-- Links -->
+
+                <form class="form-inline">
+                    <div class="md-form my-0">
+                        <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">-->
+                        <!-- <div class="phonepost">Create Post</div>-->
+                    </div>
+                </form>
+            </div>
+            <!-- Collapsible content -->
+            <div class="avatar">
+                <div class="avatar_pic"></div>
+                <div class="avatar_name">Your Nickname</div>
+            </div>
+        </nav>
+        <!--/.Navbar-->
+
+    </header>
+
+
+    <!--phone postlab version -->
+    <div class="phonepostlab" id="phonelab">
+
+    </div>
+    <!--phone postlab version -->
+
+
+    <div class="bigcolumn" id="bigcolumn">
+
+        <div class="fullSize_image" id="fullPageID">
+            <img id="fullPageIMG" class="showFullIMG" src="" onclick="closeFullIMG();">
+        </div>
+
+        <div class="postlab" id="postlab" >
+            <div class="postlabtop" id="postlabtop" onclick="tanscreen(this.id);">Create a Poll</div>
+            <i class="postlabcross fas fa-times" id="postlabcross" onclick="hidetan(this.id);"></i>
+            <div class="postlabbottom" id="postlabbottom">
+                <div class="row">
+                    <div class="col-md-12">
+
+                        <!-- Stepers Wrapper -->
+                        <ul class="stepper stepper-horizontal">
+
+                            <!-- First Step -->
+                            <li class="completed" id="1_step" onclick="radio(this.id)">
+                                <a href="#!">
+                                    <span class="circle" id="1stepcircle" style="background-color:#8ad5d8!important;">1</span>
+                                    <span class="label">First image</span>
+                                </a>
+                            </li>
+
+                            <!-- Second Step -->
+                            <li class="active" id="2_step" onclick="radio(this.id)">
+                                <a href="#!">
+                                    <span class="circle" id="2stepcircle" style="background-color:#8ad5d8!important;">2</span>
+                                    <span class="label">Second image</span>
+                                </a>
+                            </li>
+
+                            <!-- Third Step -->
+                            <li class="warning" id="3_step" onclick="radio(this.id)">
+                                <a href="#!">
+                                    <span class="circle" id="3stepcircle" style="background-color:#8ad5d8!important;">3</span>
+                                    <span class="label" style="color: rgba(0,0,0,.87);font-weight: 600">text</span>
+                                </a>
+                            </li>
+
+                        </ul>
+                        <!-- /.Stepers Wrapper -->
+
+                    </div>
+                </div>
+                <div class="understepper">
+                    <div class="form1 shown" id="form1">
+                        <div class="imagearea1" id="imagearea1"></div>
+                        <input class="classhere" type="file" name="logo" id="logo"/>
+                        <label for="logo" class="custom-file-upload" id="label1" >
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </label>
+                        <div class="labelimg" id="labelimg1">
+                            <!--<div class="labeltan" id="labeltan1"></div>-->
+                            <!--<button class="removepic" id="removepic1" onclick="deleteimg(this.id);">remove</button>-->
+                            <div class="removepic_phone" id="removepic1_phone" onclick="deleteimg(this.id);"><i class="far fa-times-circle"></i></div>
+                        </div>
+                    </div>
+                    <div class="form2 notshown" id="form2" >
+                        <div class="imagearea2" id="imagearea2"></div>
+                        <input class="classhere" type="file" name="logo2" id="logo2"/>
+                        <label for="logo2" class="custom-file-upload" id="label2">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </label>
+                        <div class="labelimg" id="labelimg2">
+                            <!--<div class="labeltan" id="labeltan2"></div>-->
+                            <!--<button class="removepic" id="removepic2" onclick="deleteimg(this.id);">remove</button>-->
+                            <div class="removepic_phone" id="removepic2_phone" onclick="deleteimg(this.id);"><i class="far fa-times-circle"></i></div>
+                        </div>
+                    </div>
+                    <div class="md-form description notshown" id="description">
+                        <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
+                        <label for="form7">Material textarea</label>
+                    </div>
+                    <span class="postingspan notshown" id="postingspan">Your Poll was successfully created!<br>Tap 'post' to post it</span>
+                </div>
+            </div>
+            <!--<div class="test example hoverable" id="forma">
+                <div class="processline" id="processline"></div>
+                <div class="process" id="process"></div>
+                <div class="movingheaders">
+                    <ul id="movingul" class="movingul">
+                        <li>Choose 1 pic</li>
+                        <li>Choose 2 pic</li>
+                        <li>Type a description</li>
+                        <li>Ready for posting!</li>
+                    </ul>
+                </div>
+
+                <div class="form1" id="form1">
+                    <div class="imagearea1" id="imagearea1"></div>
+                    <i class="fas fa-times-circle" id="deletepic1" onclick="deletepic(this.id);"><i class="fas fa-times"
+                                                                                                    id="cross"></i></i>
+                    <label for="logo" class="custom-file-upload" id="labelimg">
+                        <i class="fas fa-camera" id="camera"></i>
+                        <i class="fa fa-cloud-upload"></i>
+                    </label>
+                    <input onchange="attach1(this); " class="classhere" type="file" name="logo" id="logo"/>
+                </div>
+
+                <div class="form2" id="form2" style="display: none">
+                    <div class="imagearea2" id="imagearea2"></div>
+                    <i class="fas fa-times-circle" id="deletepic2" onclick="deletepic(this.id);"><i class="fas fa-times"
+                                                                                                    id="cross2"></i></i>
+                    <label for="logo2" class="custom-file-upload" id="labelimg2">
+                        <i class="fas fa-camera" id="camera2"></i>
+                        <i class="fa fa-cloud-upload"></i>
+                    </label>
+                    <input onchange="attach2(this);" class="classhere" type="file" name="logo" id="logo2"/>
+                </div>
+                <textarea class="description" id="description"></textarea>
+                <div class="postbtn" id="postBtn" onclick="posting();" style="display: none">
+                    <button type="button" class="btn btn-info" style="line-height: 0.5">Post it</button>
+                </div>
+                <i class="fas fa-arrow-right" id="arrow" onclick="postprocess();"></i>
+                <div class="step" id="step">
+                    <div class="movingnumbers">
+                        <ul id="movingnum">
+                            <li>1</li>
+                            <li>2</li>
+                            <li>3</li>
+                            <li>4</li>
+                        </ul>
+                    </div>
+                    <span>/</span>
+                    <span class="totalstep">4</span>
+                </div>
+            </div>-->
+            <button type="button" class=" stepperbtn btn btn-info" id="stepperbtn"  onclick="radio(this.id);">Next</button>
+        </div>
+        <div class="se-pre-con"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
+        <div class="wall" id="wall">
+            <!--<div class="postgroup postgroup1" id="postgroup1">-->
+                <!--<div class="post post1 example hoverable shadowroll" id="post1" style="position: relative">-->
+                    <!--<div class="stats" id="post1_showstats">-->
+                        <!--<div class="statistics3" id="post1_open" onclick="openchart(this.id);">-->
+                            <!--<i class="fas fa-bars"></i></div>-->
+                    <!--</div>-->
+
+                    <!--<div class="pic1 view overlay" id="post1_pic1">-->
+                        <!--<div class="mask flex-center rgba-stylish-strong" id="post1_mask1">-->
+                            <!--<i class="heart1 fas fa-heart" id="post1_heart1" onclick="showvotes(this.id)"></i>-->
+                            <!--<div class="votes vote1" id="post1_vote1">0</div>-->
+                        <!--</div>-->
+                        <!--<div class="percentage"><span id="post1_pic1_percentage">0</span>%</div>-->
+                        <!--<i class="fas fa-heart phonelikes1" id="post1_phonelikes1" onclick="phonelikes(this.id);"></i>-->
+                    <!--</div>-->
+                    <!--<div class="imgnum">-->
+                        <!--<img src="" id="tableBanner1" class="tableBanner1">-->
+                    <!--</div>-->
+                    <!--<div class="pic2 view overlay" id="post1_pic2">-->
+                        <!--<div class="mask flex-center rgba-stylish-strong" id="post1_mask2">-->
+                            <!--<i class="heart2 fas fa-heart" id="post1_heart2" onclick="showvotes(this.id)"></i>-->
+                            <!--<div class="votes vote2" id="post1_vote2">0</div>-->
+                        <!--</div>-->
+                        <!--<div class="percentage" style="right: -200px"><span id="post1_pic2_percentage">0</span>%</div>-->
+                        <!--<i class="fas fa-heart phonelikes2" id="post1_phonelikes2" onclick="phonelikes(this.id);"></i>-->
+                    <!--</div>-->
+                    <!--<div class="imgnum">-->
+                        <!--<img src="" id="tableBanner2" class="tableBanner2">-->
+                    <!--</div>-->
+                    <!--<div class="basicchart" id="basicchart_post1">-->
+                        <!--<div class="basicchart" id="basicchart_image1">-->
+                            <!--<div class="line" id="post1_line">-->
+                                <!--<div class="subline" id="post1_subline"></div>-->
+                            <!--</div>-->
+                            <!--<div class="basicchart_bottom">-->
+                                <!--<div class="votes_totalamount">votes:<span id="post1_tvamount">0</span></div>-->
+                            <!--</div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--&lt;!&ndash;<div id="post1_script" class="description_area script1"></div>&ndash;&gt;-->
+                <!--</div>-->
+                <!--<div class=" animated fadeInLeft" alt="Transparent MDB Logo" id="animated-post1">-->
+                    <!--<div class="stats" id="post1_stats">-->
+                        <!--<div class="statistics1" id="post1_worldicon" onclick="showchart(this.id);"><i-->
+                                <!--class="far fas fa-globe-americas"></i></div>-->
+                        <!--<div class="statistics2" id="post1_charticon" onclick="showchart(this.id);"><i-->
+                                <!--class="far fa-chart-bar"></i></div>-->
+                    <!--</div>-->
+                    <!--<div class="chart-area" id="post1_chart_area" style="position: relative;">-->
+                        <!--<div class="analytica1" id="post1_regions_div">-->
+                            <!--<div class="chartgeo" id="regions_div_postgroup1" style="width: 600px; height: 468px; margin: 0 auto"></div>-->
+                        <!--</div>-->
+                        <!--<div class="analytica2" id="post1_chartContainer">-->
+                            <!--<div class="chartbars" id="chartContainer_postgroup1" style="height: 370px; width: 100%;"></div>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        </div>
+        <!-- <div  style="width: 650px;height: 510px;background-color: lightblue;display: none" class="animated fadeInLeft"
+               alt="Transparent MDB Logo" id="animated-img1"> </div>-->
+    </div>
+    <div class="totop" onclick="topFunction()" id="myBtn"><i class="fas fa-arrow-circle-up"></i></div>
+</div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<!--<script src="https://www.gstatic.com/firebasejs/5.10.1/firebase.js"></script>-->
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap tooltips -->
+<script type="text/javascript" src="js/popper.min.js"></script>
+<!-- Bootstrap core JavaScript -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- MDB core JavaScript -->
+<script type="text/javascript" src="js/mdb.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+<script src="dropzone.js"></script>
+<!-- MDBootstrap Steppers Pro  -->
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="js/addons-pro/stepper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
