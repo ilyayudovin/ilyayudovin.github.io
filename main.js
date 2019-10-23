@@ -407,14 +407,16 @@ function radio(id) {
         document.getElementById('tan').style.display = "none";
         document.getElementById('postlabbottom').style.display = "none";
         document.getElementById('label1').style.display = "block";
-        document.getElementById('labelimg1').style.display = "none";
+        // document.getElementById('labelimg1').style.display = "none";
         document.getElementById('label2').style.display = "block";
-        document.getElementById('labelimg2').style.display = "none";
+        // document.getElementById('labelimg2').style.display = "none";
         document.getElementById('1stepcircle').innerHTML = "1";
         document.getElementById('2stepcircle').innerHTML = "2";
         document.getElementById('postlab').style.zIndex="2";
         document.getElementById('stepperbtn').style.display = "none";
         posting();
+    $('#labelimg1').css('background-image','url( )');
+    $('#labelimg2').css('background-image','url( )');
     // }
     // if(id==='done' && cur!=='postingspan'){
     //     var done=$('#postingspan');
