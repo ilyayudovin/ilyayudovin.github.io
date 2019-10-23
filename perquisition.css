@@ -89,6 +89,7 @@ header{
     height: 157px;
 }
 .stepperbtn{
+    display: none;
     position: absolute;
     right: 5px;
     bottom: 5px;

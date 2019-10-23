@@ -153,6 +153,13 @@ poll = {
     id: idcount,
     imgarray: []
 };
+function compare(a, b) {
+    let num1 = parseInt(a.id.replace(/\D+/g,""));
+    let num2 = parseInt(b.id.replace(/\D+/g,""));
+    if (num1 > num2) return 1; // если первое значение больше второго
+    if (num1 === num2) return 0; // если равны
+    if (num1 < num2) return -1; // если первое значение меньше второго)
+}
 db.collection("polls").get().then(function(querySnapshot) {
     querySnapshot.forEach(function(doc) {
         poll.imgarray.push(doc.data());
@@ -163,6 +170,7 @@ db.collection("polls").get().then(function(querySnapshot) {
             imgarray: []
         };
     });
+    polls.sort(compare);
     createPoll(polls);
 });
 
@@ -177,8 +185,8 @@ function createPoll(polls){
 }
 
 function createPoll2(polls){
-    var c=polls.id.length-4;
-    let i = polls.id[3+c];
+    let i = parseInt(polls.id.replace(/\D+/g,""));
+
     $("#wall").prepend("<div class='postgroup'>" +
         "<div class='post'>" +
         "<div class='stats'>" +
@@ -405,6 +413,7 @@ function radio(id) {
         document.getElementById('1stepcircle').innerHTML = "1";
         document.getElementById('2stepcircle').innerHTML = "2";
         document.getElementById('postlab').style.zIndex="2";
+        document.getElementById('stepperbtn').style.display = "none";
         posting();
     }
     if(id==='done' && cur!=='postingspan'){
@@ -585,6 +594,7 @@ function tanscreen(clicked_id) {
     document.getElementById('tan').style.display = "block";
     document.getElementById('postlabbottom').style.display = "block";
     document.getElementById('postlabcross').style.display = "block";
+    document.getElementById('stepperbtn').style.display = "block";
 }
 
 function hidetan(clicked_id) {
@@ -592,6 +602,8 @@ function hidetan(clicked_id) {
     document.getElementById('postlab').style.zIndex = "2";
     document.getElementById('postlabbottom').style.display = "none";
     document.getElementById('postlabcross').style.display = "none";
+    document.getElementById('stepperbtn').style.display = "none";
+
 }
 
 function deleteimg(clicked_id) {
