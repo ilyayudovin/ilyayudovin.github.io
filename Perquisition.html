@@ -111,7 +111,8 @@
 
         <div class="postlab" id="postlab" >
             <div class="postlabtop" id="postlabtop" onclick="tanscreen(this.id);">Create a Poll</div>
-            <i class="postlabcross fas fa-times" id="postlabcross" onclick="hidetan(this.id);"></i>
+            <i class="postlabcross fas fa-chevron-left" id="postlabcross" onclick="hidetan(this.id);"></i>
+            <!--<i class="fas fa-chevron-left"></i>-->
             <div class="postlabbottom" id="postlabbottom">
                 <div class="row">
                     <div class="col-md-12">
@@ -149,30 +150,34 @@
                     </div>
                 </div>
                 <div class="understepper">
-                    <div class="form1 shown" id="form1">
-                        <div class="imagearea1" id="imagearea1"></div>
-                        <input class="classhere" type="file" name="logo" id="logo"/>
-                        <label for="logo" class="custom-file-upload" id="label1" >
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </label>
+                    <div class="gridos">
                         <div class="labelimg" id="labelimg1">
+                            <!--<div class="removepic_phone" id="removepic1_phone" onclick="deleteimg(this.id);"><i class="far fa-times-circle"></i></div>-->
                             <!--<div class="labeltan" id="labeltan1"></div>-->
                             <!--<button class="removepic" id="removepic1" onclick="deleteimg(this.id);">remove</button>-->
-                            <div class="removepic_phone" id="removepic1_phone" onclick="deleteimg(this.id);"><i class="far fa-times-circle"></i></div>
+                            <div class="form1 shown" id="form1">
+                                <div class="imagearea1" id="imagearea1"></div>
+                                <input class="classhere" type="file" name="logo" id="logo"/>
+                                <label for="logo" class="custom-file-upload" id="label1" >
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </label>
+                            </div>
                         </div>
-                    </div>
-                    <div class="form2 notshown" id="form2" >
-                        <div class="imagearea2" id="imagearea2"></div>
-                        <input class="classhere" type="file" name="logo2" id="logo2"/>
-                        <label for="logo2" class="custom-file-upload" id="label2">
-                            <i class="fas fa-cloud-upload-alt"></i>
-                        </label>
-                        <div class="labelimg" id="labelimg2">
+                        <div class="labelimg" id="labelimg2" style="margin-left: 2%">
+                            <!--<div class="removepic_phone" id="removepic2_phone" onclick="deleteimg(this.id);"><i class="far fa-times-circle"></i></div>-->
                             <!--<div class="labeltan" id="labeltan2"></div>-->
                             <!--<button class="removepic" id="removepic2" onclick="deleteimg(this.id);">remove</button>-->
-                            <div class="removepic_phone" id="removepic2_phone" onclick="deleteimg(this.id);"><i class="far fa-times-circle"></i></div>
+                            <div class="form2" id="form2" >
+                                <div class="imagearea2" id="imagearea2"></div>
+                                <input class="classhere" type="file" name="logo2" id="logo2"/>
+                                <label for="logo2" class="custom-file-upload" id="label2">
+                                    <i class="fas fa-cloud-upload-alt"></i>
+                                </label>
+                            </div>
                         </div>
                     </div>
+
+
                     <div class="md-form description notshown" id="description">
                         <textarea id="form7" class="md-textarea form-control" rows="3"></textarea>
                         <label for="form7">Material textarea</label>
@@ -231,7 +236,7 @@
                     <span class="totalstep">4</span>
                 </div>
             </div>-->
-            <button type="button" class=" stepperbtn btn btn-info" id="stepperbtn"  onclick="radio(this.id);">Next</button>
+            <button type="button" class=" stepperbtn btn btn-info" id="stepperbtn" onclick="radio(this.id)">POST</button>
         </div>
         <div class="se-pre-con"><div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div></div>
         <div class="wall" id="wall">

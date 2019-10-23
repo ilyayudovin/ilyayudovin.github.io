@@ -331,77 +331,77 @@ function attach2(file_url) {
 }
 
 function radio(id) {
-    var current='';
-    var last='';
-    var last1 ='';
-    var last2 ='';
-    var cur=document.querySelector('.shown').id;
-    if(id==='stepperbtn'){
-        if (cur==='form1'){
-            id='2_step';
-        }
-        if(cur==='form2'){
-            id='3_step';
-        }
-        if(cur==='description'){
-            id='done';
-        }
-        if(cur==='postingspan'){
-            id='postPoll';
-        }
-    }
-    if(id==='1_step'){
-        current= $('#form1');
-        last=$('#postingspan');
-        last.addClass('notshown');
-        last.removeClass('shown');
-        last1= $('#form2');
-        last2=$('#description');
-        current.addClass('shown');
-        current.removeClass('notshown');
-        last1.removeClass('shown');
-        last1.addClass('notshown');
-        last2.removeClass('shown');
-        last2.addClass('notshown');
-        document.getElementById('stepperbtn').innerHTML = "next";
-    }
-    if(id==='2_step'){
-        current= $('#form2');
-        last=$('#postingspan');
-        last.addClass('notshown');
-        last.removeClass('shown');
-        last1= $('#form1');
-        last2=$('#description');
-        current.addClass('shown');
-        current.removeClass('notshown');
-        last1.removeClass('shown');
-        last1.addClass('notshown');
-        last2.removeClass('shown');
-        last2.addClass('notshown');
-        document.getElementById('stepperbtn').innerHTML = "next";
-    }
-    if(id==='3_step'){
-        current= $('#description');
-        last=$('#postingspan');
-        last.addClass('notshown');
-        last.removeClass('shown');
-        last1= $('#form1');
-        last2=$('#form2');
-        current.addClass('shown');
-        current.removeClass('notshown');
-        last1.removeClass('shown');
-        last1.addClass('notshown');
-        last2.removeClass('shown');
-        last2.addClass('notshown');
-        document.getElementById('stepperbtn').innerHTML = "next";
-    }
-    if(id==='postPoll' && cur==='postingspan'){
-        cur=$('#postingspan');
+    // var current='';
+    // var last='';
+    // var last1 ='';
+    // var last2 ='';
+    // var cur=document.querySelector('.shown').id;
+    // if(id==='stepperbtn'){
+    //     if (cur==='form1'){
+    //         id='2_step';
+    //     }
+    //     if(cur==='form2'){
+    //         id='3_step';
+    //     }
+    //     if(cur==='description'){
+    //         id='done';
+    //     }
+    //     if(cur==='postingspan'){
+    //         id='postPoll';
+    //     }
+    // }
+    // if(id==='1_step'){
+    //     current= $('#form1');
+    //     last=$('#postingspan');
+    //     last.addClass('notshown');
+    //     last.removeClass('shown');
+    //     last1= $('#form2');
+    //     last2=$('#description');
+    //     current.addClass('shown');
+    //     current.removeClass('notshown');
+    //     last1.removeClass('shown');
+    //     last1.addClass('notshown');
+    //     last2.removeClass('shown');
+    //     last2.addClass('notshown');
+    //     document.getElementById('stepperbtn').innerHTML = "next";
+    // }
+    // if(id==='2_step'){
+    //     current= $('#form2');
+    //     last=$('#postingspan');
+    //     last.addClass('notshown');
+    //     last.removeClass('shown');
+    //     last1= $('#form1');
+    //     last2=$('#description');
+    //     current.addClass('shown');
+    //     current.removeClass('notshown');
+    //     last1.removeClass('shown');
+    //     last1.addClass('notshown');
+    //     last2.removeClass('shown');
+    //     last2.addClass('notshown');
+    //     document.getElementById('stepperbtn').innerHTML = "next";
+    // }
+    // if(id==='3_step'){
+    //     current= $('#description');
+    //     last=$('#postingspan');
+    //     last.addClass('notshown');
+    //     last.removeClass('shown');
+    //     last1= $('#form1');
+    //     last2=$('#form2');
+    //     current.addClass('shown');
+    //     current.removeClass('notshown');
+    //     last1.removeClass('shown');
+    //     last1.addClass('notshown');
+    //     last2.removeClass('shown');
+    //     last2.addClass('notshown');
+    //     document.getElementById('stepperbtn').innerHTML = "next";
+    // }
+    // if(id==='postPoll' && cur==='postingspan'){
+        let cur=$('#postingspan');
         var next=$('#form1');
-        cur.addClass('notshown');
-        cur.removeClass('shown');
-        next.addClass('shown');
-        next.removeClass('notshown');
+        // cur.addClass('notshown');
+        // cur.removeClass('shown');
+        // next.addClass('shown');
+        // next.removeClass('notshown');
         document.getElementById('postlabcross').style.display = "none";
         document.getElementById('stepperbtn').innerHTML = "next";
         document.getElementById('tan').style.display = "none";
@@ -415,16 +415,16 @@ function radio(id) {
         document.getElementById('postlab').style.zIndex="2";
         document.getElementById('stepperbtn').style.display = "none";
         posting();
-    }
-    if(id==='done' && cur!=='postingspan'){
-        var done=$('#postingspan');
-        done.addClass('shown');
-        done.removeClass('notshown');
-        last=$('#description');
-        last.removeClass('shown');
-        last.addClass('notshown');
-        document.getElementById('stepperbtn').innerHTML = "post";
-    }
+    // }
+    // if(id==='done' && cur!=='postingspan'){
+    //     var done=$('#postingspan');
+    //     done.addClass('shown');
+    //     done.removeClass('notshown');
+    //     last=$('#description');
+    //     last.removeClass('shown');
+    //     last.addClass('notshown');
+    //     document.getElementById('stepperbtn').innerHTML = "post";
+    // }
 }
 
 var getElementsInArea = (function (docElm) {
@@ -598,6 +598,7 @@ function tanscreen(clicked_id) {
 }
 
 function hidetan(clicked_id) {
+    document.location.reload(true);
     document.getElementById('tan').style.display = "none";
     document.getElementById('postlab').style.zIndex = "2";
     document.getElementById('postlabbottom').style.display = "none";
