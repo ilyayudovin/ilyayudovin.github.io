@@ -8,7 +8,7 @@ var firebaseConfig = {
 };
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
-// var storage = firebase.storage();
+var storage = firebase.storage();
 var x=1;
 $(document).ready(function () {
 
@@ -115,11 +115,86 @@ const likedPosts=[];
         }
     }
 }
-function posting(box) {
-    // document.getElementById('stepperbtn').innerHTML = "post";
+function uploadFiles_part1() {
+    var file1 = document.getElementById('logo');
+    var selectedfile = file1.files[0];
+    var name = "123" + Date.now();
 
-    var img1_src = $('#labelimg1').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
-    var img2_src = $('#labelimg2').css('background-image').replace('url(','').replace(')','').replace(/\"/gi, "");
+    var storageRef = storage.ref('/images/' + name);
+
+    var uploadTask = storageRef.put(selectedfile);
+
+    uploadTask.on('state_changed', function(snapshot){
+        var progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        switch (snapshot.state) {
+            case firebase.storage.TaskState.PAUSED:
+                console.log('Upload is paused');
+                break;
+            case firebase.storage.TaskState.RUNNING:
+                console.log('Upload is running');
+                break;
+        }
+    }, function(error) {console.log(error);
+    }, function() {
+
+        // get the uploaded image url back
+        uploadTask.snapshot.ref.getDownloadURL().then(
+            function(downloadURL1) {
+
+                // You get your url from here
+                console.log('File available at', downloadURL1);
+
+                // print the image url
+                console.log(downloadURL1);
+                var pic1 = downloadURL1;
+                uploadFiles_part2(pic1);
+            });
+    });
+}
+
+function uploadFiles_part2(pic1URL) {
+    var file2 = document.getElementById('logo2');
+    var selectedfile = file2.files[0];
+    var name = "123" + Date.now();
+
+    var storageRef = storage.ref('/images/' + name);
+
+    var uploadTask = storageRef.put(selectedfile);
+
+    uploadTask.on('state_changed', function(snapshot){
+        var progress =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+        switch (snapshot.state) {
+            case firebase.storage.TaskState.PAUSED:
+                console.log('Upload is paused');
+                break;
+            case firebase.storage.TaskState.RUNNING:
+                console.log('Upload is running');
+                break;
+        }
+    }, function(error) {console.log(error);
+    }, function() {
+
+        // get the uploaded image url back
+        uploadTask.snapshot.ref.getDownloadURL().then(
+            function(downloadURL1) {
+
+                // You get your url from here
+                console.log('File available at', downloadURL1);
+
+                // print the image url
+                console.log(downloadURL1);
+                var pic2 = downloadURL1;
+                posting(pic1URL,pic2);
+            });
+    });
+}
+
+function posting(pic1URL,pic2URL) {
+
+    var img1_src = pic1URL;
+    var img2_src = pic2URL;
 
     db.collection("polls").doc("post" + idcount).set({
         images:{
@@ -414,7 +489,7 @@ function radio(id) {
         document.getElementById('2stepcircle').innerHTML = "2";
         document.getElementById('postlab').style.zIndex="2";
         document.getElementById('stepperbtn').style.display = "none";
-        posting();
+        uploadFiles_part1();
     $('#labelimg1').css('background-image','url( )');
     $('#labelimg2').css('background-image','url( )');
     // }
