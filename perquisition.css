@@ -121,12 +121,13 @@ header{
 }
 .postlabcross{
     position: absolute;
-    left: 10px;
-    top: 5px;
+    top: 0;
     color: black;
     cursor: pointer;
     display: none;
     font-size: 21px;
+    line-height: 33px;
+    width: 35px;
 }
 .removepic_phone{
     display: none;
